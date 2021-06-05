@@ -1,0 +1,46 @@
+- name: Configure Kali
+  hosts: all
+  connection: ssh
+  gather_facts: yes
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+  - name: Get Vars
+    include_vars:
+      file: ansiblevars.yml
+
+  - name: Install packages
+    apt:
+      name:
+        - open-vm-tools
+        - open-vm-tools-desktop
+        - fuse
+        - iptables
+        - mimikatz
+        - dnsutils
+        - openssl
+        - bloodhound
+        - libreoffice
+      update_cache: yes
+
+  - name: Download VS Code
+    get_url:
+      url: https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
+      dest: /tmp/vscode.deb
+
+  - name: Install VS Code
+    apt:
+      deb: /tmp/vscode.deb
+
+
+#  - name: Install Ghidra, volatility, etc
+
+  - name: Add an authorized key (ssh access, has sudoer, change password on login, can't ssh with password)
+    ansible.posix.authorized_key:
+      user: kali
+      state: present
+      exclusive: no
+      key: "{{ user.ssh_pub_key }}"
+

@@ -1,0 +1,8 @@
+# Cache objects
+packer_cache/
+
+# For built boxes
+*.box
+
+# leave the .iso out of the repo for now
+*.iso

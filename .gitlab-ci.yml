@@ -1,0 +1,29 @@
+stages:
+  - build
+
+image: ubuntu:20.04
+
+packer-kali:
+  stage: build
+  script:
+    # INSTALL
+    - echo "Install Dependencies"
+    - apt update
+    - apt install software-properties-common -y
+    - add-apt-repository --yes --update ppa:ansible/ansible
+    - apt install ansible -y
+    - apt install curl -y
+    - curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
+    - apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+    - apt-get install packer -y
+    # VALIDATE
+    - echo "Validating Packer build"
+    - cd ./images/kali
+    - packer validate kali.json
+    # TODO actually build
+    # TODO actually validate
+  rules:
+    # This makes the CI (this job) only run for merge requests to save CICD credits.
+    # you should be using `gitlab-runner exec docker <job-id>` locally before any push or merge
+    # so we have as few failures in the shared CICD pipeline as possible.
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
