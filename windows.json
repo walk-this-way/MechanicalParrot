@@ -1,0 +1,48 @@
+{
+  "builders": [
+    {
+      "type": "vsphere-iso",
+      "ip_wait_timeout": "1h",
+      "vcenter_server": "<ip of vsphere host>",
+      "insecure_connection": "true",
+      "username": "<user name of vsphere>",
+      "password": "<password of vsphere>",
+      "host": "localhost.localdomain",
+      "datastore": "vmstore",
+      "folder": "<parent folder for VM datastore>",
+      "communicator": "winrm",
+      "winrm_username": "Administrator",
+      "winrm_password": "S3cr3t0!",
+      "vm_name":  "<computer name for created machine>",
+      "convert_to_template": "true",
+      "cpus": "2",
+      "ram": "2048",
+      "network": "VM Network",
+      "network_card": "vmxnet3",
+      "disk_controller_type":  "lsilogic-sas",
+      "guest_os_type": "windows9Server64Guest",
+      "disk_thin_provisioned": true,
+      "disk_size": "32768",
+      "iso_paths":[
+        "[isostore] ISOS/17763.737.190906-2324.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us_1.iso",
+        "[isostore] ISOS/windows.iso"
+        ],
+
+    "floppy_files": [
+      "autounattend.xml",
+            "../scripts/disable-network-discovery.cmd",
+            "../scripts/enable-rdp.cmd",
+            "../scripts/enable-winrm.ps1",
+            "../scripts/install-vm-tools.cmd",
+            "../scripts/set-temp.ps1"
+      ]    
+    }
+  ],
+
+  "provisioners": [
+    {
+      "type": "windows-shell",
+      "inline": ["ipconfig"]
+    }
+  ]
+}
