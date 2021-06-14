@@ -1,19 +1,27 @@
 {
+  "variables": {
+    "vsphere-server": "",
+    "vsphere-user": "",
+    "vsphere-password": "",
+    "template-computer-name": "",
+    "iso-store": ""
+  },
+
   "builders": [
     {
       "type": "vsphere-iso",
       "ip_wait_timeout": "1h",
-      "vcenter_server": "<ip of vsphere host>",
+      "vcenter_server": "{{user `vsphere-server`}}",
       "insecure_connection": "true",
-      "username": "<user name of vsphere>",
-      "password": "<password of vsphere>",
+      "username": "{{user `vsphere-user`}}",
+      "password": "{{user `vsphere-password`}}",
       "host": "localhost.localdomain",
       "datastore": "vmstore",
-      "folder": "<parent folder for VM datastore>",
+      "folder": "{{user `template-folder`}}",
       "communicator": "winrm",
       "winrm_username": "Administrator",
       "winrm_password": "S3cr3t0!",
-      "vm_name":  "<computer name for created machine>",
+      "vm_name":  "{{user `template-computer-name`}}",
       "convert_to_template": "true",
       "cpus": "2",
       "ram": "2048",
@@ -24,7 +32,7 @@
       "disk_thin_provisioned": true,
       "disk_size": "32768",
       "iso_paths":[
-        "[isostore] ISOS/17763.737.190906-2324.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us_1.iso",
+        "{{user `iso-store`}}",
         "[isostore] ISOS/windows.iso"
         ],
 
