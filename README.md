@@ -4,7 +4,7 @@
 
 [[_TOC_]]
 
-### Introduction
+## Introduction
 
 I couldn't copy anything out of MS teams with my permissions, but here is a presentation from 2021.
 
@@ -22,7 +22,7 @@ Key people:
 | Person E | Engineer              |
 
 
-### Hardware
+## Hardware
 
 |             | Dell PowerEdge R6515                             | QNAP TS-883XU-RP             | Cisco C9200L-24PXG           | DualComm ETAP-5203 |
 |-------------|--------------------------------------------------|------------------------------|------------------------------|--------------------|
@@ -34,13 +34,13 @@ Key people:
 |             |                                                  |                              |                              |                    |
 |             |                                                  |                              |                              |                    |
 
-### Physical Networking
+## Physical Networking
 
 ![Physical network map](https://gitlab.com/170FAK/mechanicalparrot/uploads/c4c7f190a8b354502767d12a1406e015/FAK_Diagram.svg "Physical network map")
 
-### Logical VM Networks
+## Logical VM Networks
 
-#### 1. FAK firewall configuration
+### 1. FAK firewall configuration
 [See full documentation on wiki page](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/FAK-FireWall-Rules-and-Configuration-Wiki)
 [![FAK firewall configuration](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/uploads/6d064517edec075f6358191d6622fa99/image.png "FAK firewall configuration")](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/FAK-FireWall-Rules-and-Configuration-Wiki)
 
@@ -61,7 +61,7 @@ Key people:
 
 
 
-### How to connect to kit remotely
+## How to connect to kit remotely
 
 [![VPN connection](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/uploads/b910fc7e49761873e13dc47827a8b768/FAK_VPN_logical.png "VPN connection")](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/VPN-Connection-Wiki)
 
@@ -70,9 +70,9 @@ Key people:
 [Google Authenticator Wiki](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/Google-Authenticator-Wiki)
 
 
-### Proposed software list
+## Proposed software list
 
-#### 1. What we used at VALEX according to memory
+### 1. What we used at VALEX according to memory
 
 | Software     | Teams             | Used/Desired | Pain points                                                                                   |
 |--------------|-------------------|--------------|-----------------------------------------------------------------------------------------------|
@@ -84,7 +84,7 @@ Key people:
 | VMs          | Hunt/Harden/Clear | Used         | Weren't connected into the valex, only used for rehearsal drills                              |
 | Networking   |                   |              | Had bad internet connection, bad connection into VALEX, and VALEX systems were slow.          |
 
-#### 2. Full software list
+### 2. Full software list
 
 | Name                | cost   |
 |---------------------|--------|
@@ -152,9 +152,9 @@ Key people:
 | wireshark           |        |
 
 
-### Team SOPs
+## Team SOPs
 
-#### Harden
+### Harden
 
 | Priority/Phase | Task                                                                        |
 |----------------|-----------------------------------------------------------------------------|
@@ -168,10 +168,10 @@ Key people:
 | 6              | Harden site-specific vulns based on assessment.                             |
 
 
-#### Clear
+### Clear
 
 (TODO)
 
-#### Hunt
+### Hunt
 
 (TODO)
