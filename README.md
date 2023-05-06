@@ -1,28 +1,10 @@
-<!-- vscode-markdown-toc -->
-	* 1. [Introduction](#Introduction)
-	* 2. [Hardware](#Hardware)
-	* 3. [Physical Networking](#PhysicalNetworking)
-	* 4. [Logical VM Networks](#LogicalVMNetworks)
-		* 4.1. [1. FAK firewall configuration](#FAKfirewallconfiguration)
-		* 4.2. [2. VM networks](#VMnetworks)
-	* 5. [How to connect to kit remotely](#Howtoconnecttokitremotely)
-	* 6. [Proposed software list](#Proposedsoftwarelist)
-		* 6.1. [1. What we used at VALEX according to memory](#WhatweusedatVALEXaccordingtomemory)
-		* 6.2. [2. Full software list](#Fullsoftwarelist)
-	* 7. [Team SOPs](#TeamSOPs)
-		* 7.1. [Harden](#Harden)
-		* 7.2. [Clear](#Clear)
-		* 7.3. [Hunt](#Hunt)
+# MechanicalParrot
 
-<!-- vscode-markdown-toc-config
-	numbering=true
-	autoSave=true
-	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc --># MechanicalParrot
+## Table of Contents
 
+[[_TOC_]]
 
-
-###  1. <a name='Introduction'></a>Introduction
+### Introduction
 
 I couldn't copy anything out of MS teams with my permissions, but here is a presentation from 2021.
 
@@ -40,7 +22,7 @@ Key people:
 | Person E | Engineer              |
 
 
-###  2. <a name='Hardware'></a>Hardware
+### Hardware
 
 |             | Dell PowerEdge R6515                             | QNAP TS-883XU-RP             | Cisco C9200L-24PXG           | DualComm ETAP-5203 |
 |-------------|--------------------------------------------------|------------------------------|------------------------------|--------------------|
@@ -52,18 +34,18 @@ Key people:
 |             |                                                  |                              |                              |                    |
 |             |                                                  |                              |                              |                    |
 
-###  3. <a name='PhysicalNetworking'></a>Physical Networking
+### Physical Networking
 
 ![Physical network map](https://gitlab.com/170FAK/mechanicalparrot/uploads/c4c7f190a8b354502767d12a1406e015/FAK_Diagram.svg "Physical network map")
 
-###  4. <a name='LogicalVMNetworks'></a>Logical VM Networks
+### Logical VM Networks
 
-####  4.1. <a name='FAKfirewallconfiguration'></a>1. FAK firewall configuration
+#### 1. FAK firewall configuration
 [See full documentation on wiki page](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/FAK-FireWall-Rules-and-Configuration-Wiki)
 [![FAK firewall configuration](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/uploads/6d064517edec075f6358191d6622fa99/image.png "FAK firewall configuration")](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/FAK-FireWall-Rules-and-Configuration-Wiki)
 
 
-####  4.2. <a name='VMnetworks'></a>2. VM networks
+#### 2. VM networks
 
 | VLAN name              | IP Range      | Gateway    | DHCP               |
 |------------------------|---------------|------------|--------------------|
@@ -79,7 +61,7 @@ Key people:
 
 
 
-###  5. <a name='Howtoconnecttokitremotely'></a>How to connect to kit remotely
+### How to connect to kit remotely
 
 [![VPN connection](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/uploads/b910fc7e49761873e13dc47827a8b768/FAK_VPN_logical.png "VPN connection")](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/VPN-Connection-Wiki)
 
@@ -88,9 +70,9 @@ Key people:
 [Google Authenticator Wiki](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/Google-Authenticator-Wiki)
 
 
-###  6. <a name='Proposedsoftwarelist'></a>Proposed software list
+### Proposed software list
 
-####  6.1. <a name='WhatweusedatVALEXaccordingtomemory'></a>1. What we used at VALEX according to memory
+#### 1. What we used at VALEX according to memory
 
 | Software     | Teams             | Used/Desired | Pain points                                                                                   |
 |--------------|-------------------|--------------|-----------------------------------------------------------------------------------------------|
@@ -102,7 +84,7 @@ Key people:
 | VMs          | Hunt/Harden/Clear | Used         | Weren't connected into the valex, only used for rehearsal drills                              |
 | Networking   |                   |              | Had bad internet connection, bad connection into VALEX, and VALEX systems were slow.          |
 
-####  6.2. <a name='Fullsoftwarelist'></a>2. Full software list
+#### 2. Full software list
 
 | Name                | cost   |
 |---------------------|--------|
@@ -170,9 +152,9 @@ Key people:
 | wireshark           |        |
 
 
-###  7. <a name='TeamSOPs'></a>Team SOPs
+### Team SOPs
 
-####  7.1. <a name='Harden'></a>Harden
+#### Harden
 
 | Priority/Phase | Task                                                                        |
 |----------------|-----------------------------------------------------------------------------|
@@ -186,10 +168,10 @@ Key people:
 | 6              | Harden site-specific vulns based on assessment.                             |
 
 
-####  7.2. <a name='Clear'></a>Clear
+#### Clear
 
 (TODO)
 
-####  7.3. <a name='Hunt'></a>Hunt
+#### Hunt
 
 (TODO)
