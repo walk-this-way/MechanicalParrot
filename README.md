@@ -45,7 +45,7 @@ Key people:
 [![FAK firewall configuration](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/uploads/6d064517edec075f6358191d6622fa99/image.png "FAK firewall configuration")](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/FAK-FireWall-Rules-and-Configuration-Wiki)
 
 
-#### 2. VM networks
+### 2. VM networks
 
 | VLAN name              | IP Range      | Gateway    | DHCP               |
 |------------------------|---------------|------------|--------------------|
