@@ -1,5 +1,15 @@
 # MechanicalParrot
 
+# Table of Contents
+1. [Introduction](###Introduction)
+2. [Hardware](###Hardware)
+3. [Physical_Networking](###Physical_Networking)
+4. [Logical_VM_Networks](###Logical_VM_Networks)
+5. [How_to_connect_to_kit_remotely](###How_to_connect_to_kit_remotely)
+6. [Proposed_software_list](###Proposed_software_list)
+7. [Team_SOPs](###Team_SOPs)
+
+
 ### Introduction
 
 I couldn't copy anything out of MS teams with my permissions, but here is a presentation from 2021.
@@ -18,7 +28,7 @@ Key people:
 | Person E | Engineer              |
 
 
-### Kit Hardware
+### Hardware
 
 |             | Dell PowerEdge R6515                             | QNAP TS-883XU-RP             | Cisco C9200L-24PXG           | DualComm ETAP-5203 |
 |-------------|--------------------------------------------------|------------------------------|------------------------------|--------------------|
@@ -30,17 +40,18 @@ Key people:
 |             |                                                  |                              |                              |                    |
 |             |                                                  |                              |                              |                    |
 
-### Physical network map
+### Physical_Networking
 
 ![Physical network map](https://gitlab.com/170FAK/mechanicalparrot/uploads/c4c7f190a8b354502767d12a1406e015/FAK_Diagram.svg "Physical network map")
 
-### Logical VM networks
+### Logical_VM_Networks
 
-1. FAK firewall configuration
+#### 1. FAK firewall configuration
 [See full documentation on wiki page](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/FAK-FireWall-Rules-and-Configuration-Wiki)
-![FAK firewall configuration](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/uploads/6d064517edec075f6358191d6622fa99/image.png "FAK firewall configuration")
+[![FAK firewall configuration](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/uploads/6d064517edec075f6358191d6622fa99/image.png "FAK firewall configuration")](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/FAK-FireWall-Rules-and-Configuration-Wiki)
 
-2. VM networks
+
+#### 2. VM networks
 
 | VLAN name              | IP Range      | Gateway    | DHCP               |
 |------------------------|---------------|------------|--------------------|
@@ -56,19 +67,18 @@ Key people:
 
 
 
-### How to connect to kit remotely
+### How_to_connect_to_kit_remotely
 
-
-![VPN connection](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/uploads/b910fc7e49761873e13dc47827a8b768/FAK_VPN_logical.png "VPN connection")
+[![VPN connection](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/uploads/b910fc7e49761873e13dc47827a8b768/FAK_VPN_logical.png "VPN connection")](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/VPN-Connection-Wiki)
 
 [VPN Connection Wiki](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/VPN-Connection-Wiki)
 [SSH Connection Wiki](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/SSH-Connection-Wiki)
 [Google Authenticator Wiki](https://gitlab.com/170FAK/mechanicalparrot/-/wikis/Google-Authenticator-Wiki)
 
 
-### Proposed software list
+### Proposed_software_list
 
-1. What we used at VALEX according to memory
+#### 1. What we used at VALEX according to memory
 
 | Software     | Teams             | Used/Desired | Pain points                                                                                   |
 |--------------|-------------------|--------------|-----------------------------------------------------------------------------------------------|
@@ -78,9 +88,9 @@ Key people:
 | Ticketing    |                   | Desired      |                                                                                               |
 | File sharing | Hunt/Harden/Clear | Used         | How to share and have multiple people edit network diagrams and spreadsheets at the same time |
 | VMs          | Hunt/Harden/Clear | Used         | Weren't connected into the valex, only used for rehearsal drills                              |
-|              |                   |              |                                                                                               |
+| Networking   |                   |              | Had bad internet connection, bad connection into VALEX, and VALEX systems were slow.          |
 
-2. Full software list
+#### 2. Full software list
 
 | Name                | cost   |
 |---------------------|--------|
@@ -148,7 +158,9 @@ Key people:
 | wireshark           |        |
 
 
-### Team SOPs
+### Team_SOPs
+
+#### Harden
 
 | Priority/Phase | Task                                                                        |
 |----------------|-----------------------------------------------------------------------------|
@@ -161,7 +173,6 @@ Key people:
 | 5              | Assess site specific vulns, OS, system, software versions and configuration |
 | 6              | Harden site-specific vulns based on assessment.                             |
 
-#### Harden
 
 #### Clear
 
